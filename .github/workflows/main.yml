@@ -22,7 +22,7 @@ jobs:
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core Project
-      run: dotnet publish Portfolio.csproj -c Release -o release --nologo
+      run: dotnet publish Homepage.csproj -c Release -o release --nologo
 
     - name: Fix base tag
       run: sed -i 's/<base href="\/" \/>/<base href="\/portfolio\/" \/>/g' release/wwwroot/index.html
